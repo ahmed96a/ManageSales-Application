@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1F20359-E79D-4EA5-81EF-1C51ADF8E725}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectManageSales</RootNamespace>
+    <AssemblyName>ProjectManageSales</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>C6239EDC778F557F7ED598A837D627DA5677228A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ProjectManageSales_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\Category.cs" />
+    <Compile Include="BL\Customer.cs" />
+    <Compile Include="BL\Login.cs" />
+    <Compile Include="BL\Order.cs" />
+    <Compile Include="BL\Products.cs" />
+    <Compile Include="BL\Users.cs" />
+    <Compile Include="DAL\DataAccessLayer.cs" />
+    <Compile Include="PL\AddProduct_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\AddProduct_Form.Designer.cs">
+      <DependentUpon>AddProduct_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\AddUser_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\AddUser_Form.Designer.cs">
+      <DependentUpon>AddUser_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\BackUp_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\BackUp_Form.Designer.cs">
+      <DependentUpon>BackUp_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\CategoryManage_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\CategoryManage_Form.Designer.cs">
+      <DependentUpon>CategoryManage_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Config_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Config_Form.Designer.cs">
+      <DependentUpon>Config_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\CustomerList_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\CustomerList_Form.Designer.cs">
+      <DependentUpon>CustomerList_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\CutomerManage_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\CutomerManage_Form.Designer.cs">
+      <DependentUpon>CutomerManage_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Login_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Login_Form.Designer.cs">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Main_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Main_Form.Designer.cs">
+      <DependentUpon>Main_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\OrderList_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\OrderList_Form.Designer.cs">
+      <DependentUpon>OrderList_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\AddOrder_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\AddOrder_Form.Designer.cs">
+      <DependentUpon>AddOrder_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Preview_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Preview_Form.Designer.cs">
+      <DependentUpon>Preview_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\ProductList_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\ProductList_Form.Designer.cs">
+      <DependentUpon>ProductList_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\ProductManage_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\ProductManage_Form.Designer.cs">
+      <DependentUpon>ProductManage_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Restore_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Restore_Form.Designer.cs">
+      <DependentUpon>Restore_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\SaleManage_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\SaleManage_Form.Designer.cs">
+      <DependentUpon>SaleManage_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\UserManage_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\UserManage_Form.Designer.cs">
+      <DependentUpon>UserManage_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RPT\RPT_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\RPT_Form.Designer.cs">
+      <DependentUpon>RPT_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\rpt_all_categories.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_all_categories.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\rpt_all_products.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_all_products.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\rpt_order.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_order.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\rpt_single_category.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_single_category.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\rpt_single_product.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_single_product.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="PL\AddProduct_Form.resx">
+      <DependentUpon>AddProduct_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\AddUser_Form.resx">
+      <DependentUpon>AddUser_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\BackUp_Form.resx">
+      <DependentUpon>BackUp_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\CategoryManage_Form.resx">
+      <DependentUpon>CategoryManage_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Config_Form.resx">
+      <DependentUpon>Config_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\CustomerList_Form.resx">
+      <DependentUpon>CustomerList_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\CutomerManage_Form.resx">
+      <DependentUpon>CutomerManage_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Login_Form.resx">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Main_Form.resx">
+      <DependentUpon>Main_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\OrderList_Form.resx">
+      <DependentUpon>OrderList_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\AddOrder_Form.resx">
+      <DependentUpon>AddOrder_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Preview_Form.resx">
+      <DependentUpon>Preview_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\ProductList_Form.resx">
+      <DependentUpon>ProductList_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\ProductManage_Form.resx">
+      <DependentUpon>ProductManage_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Restore_Form.resx">
+      <DependentUpon>Restore_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\SaleManage_Form.resx">
+      <DependentUpon>SaleManage_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\UserManage_Form.resx">
+      <DependentUpon>UserManage_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RPT\RPT_Form.resx">
+      <DependentUpon>RPT_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\rpt_all_categories.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_all_categories.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\rpt_all_products.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_all_products.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\rpt_order.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_order.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\rpt_single_category.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_single_category.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\rpt_single_product.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_single_product.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unkownProduct.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ExcelReports\" />
+    <Folder Include="PdfReports\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
